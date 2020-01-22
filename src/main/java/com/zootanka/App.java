@@ -10,11 +10,10 @@ public class App {
         // tencent
         String earnings700 = "0.5700	 	0.8900	 	1.1200	 	1.3900	 	1.6900 2.5790	 	3.0970	 	4.3830	 	7.5980	 	8.3360  10.95 11.42 	13.87 	15.92 	20.16";
 
-        System.out.println(Stock.of("Tencent", "HKEX:700", earnings700, 2009).simulatePe(35));
+        System.out.println(Stock.of("Tencent", "HKEX:700", earnings700, 2009).simulatePe(30));
 
         // alibaba
         String earningBaba = "$0.04 $0.05 $0.29 $0.57 $1.62 $1.55 $4.29 $2.46 $3.88 $4.97 9.02 11.14 15.5";
-
         System.out.println(Stock.of("Alibaba", "NYSE:BABA", earningBaba, 2010).simulatePe(29));
 
         // xilinx
