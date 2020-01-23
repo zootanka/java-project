@@ -6,6 +6,9 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.stream.IntStream;
 
+/**
+ *
+ */
 public class Stock {
     private String name;
     private String ticker;
@@ -27,22 +30,27 @@ public class Stock {
         System.out.println(earnings);
     }
 
+    public static Stock of(final String name, final String ticker, final String earnings, final int year) {
+        final Stock s = new Stock(name, ticker);
+        s.setEarnings(year, earnings);
+        return s;
+    }
+
     public String simulatePe(final int pe) {
         final StringBuilder builder = new StringBuilder();
+        builder.append(ticker + "\n");
         final int year = Calendar.getInstance().get(Calendar.YEAR);
 
         IntStream.range(0, earnings.size()).mapToObj(i -> {
             float stockPrice = pe * earnings.get(i);
             int simYear = earningsYearStart + i;
-            return String.format("%d: %2.2f%s", simYear, stockPrice, simYear > year-1 ? "e\n" : "\n");
+            return String.format("%d: %2.2f%s", simYear, stockPrice, simYear > year - 1 ? "e\n" : "\n");
         }).forEach(builder::append);
 
         return builder.toString();
     }
 
-    public static Stock of(final String name, final String ticker, final String earnings, final int year) {
-        final Stock s = new Stock(name, ticker);
-        s.setEarnings(year, earnings);
-        return s;
+    public void calculateSimpleMovingAverageEarnings() {
+
     }
 }
