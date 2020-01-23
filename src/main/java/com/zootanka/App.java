@@ -20,5 +20,9 @@ public class App {
         // xilinx
         String earningXilinx = "1.0100 1.0400 1.2700 1.3600 1.3000 2.4300 2.0100 1.8600 2.3700 2.4400 2.1400 2.4700 2.0500 3.5200 3.52 3.6 4.8";
         System.out.println(Stock.of("Xilinx", "NASDAQ:XLNX", earningXilinx, 2006).simulatePe(27));
+
+        // lufthansa
+        String earningsLufthansa = "0.9900	 	1.7500	 	3.6100	 	1.3100	 	-0.2400 2.4700	 	-0.0300	 	2.1600	 	0.6800	 	0.1200 3.6700	 	3.8100	 	5.0300	 	4.5800  2.45 3.44	4.04	4.99 	5.32";
+        System.out.println(Stock.of("Lufthansa", "XETR:LHA", earningsLufthansa, 2005).simulatePe(7));
     }
 }
