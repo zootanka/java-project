@@ -39,6 +39,7 @@ public class Stock {
     public String simulatePe(final int pe) {
         final StringBuilder builder = new StringBuilder();
         builder.append(ticker + "\n");
+        builder.append("PE: "+pe+"\n");
         final int year = Calendar.getInstance().get(Calendar.YEAR);
 
         IntStream.range(0, earnings.size()).mapToObj(i -> {

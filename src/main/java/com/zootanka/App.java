@@ -30,5 +30,29 @@ public class App {
         // amazon
         String earningsAmazon = "0.8700 0.4600 1.1500 1.5200 2.0800 2.5800 1.3900 -0.0900 0.6000 -0.5200 1.2800 5.0100 6.3200 20.6800 20.51 26.19 38.75 60.54";
         System.out.println(Stock.of("Amazon", "NASDAQ:AMZN", earningsAmazon, 2005).simulatePe(90));
+
+        // amgen
+        String earningsAmgen = "2.9700 2.5100 2.8300 3.9200 4.9100 4.8200 4.0700 5.6100 6.7500 6.8000 9.1500 10.3200 2.7100 12.7000 12.7000 14.56 16.19 17.39 18.51";
+        System.out.println(Stock.of("Amgen", "NASDAQ:AMGN", earningsAmgen, 2005).simulatePe(15));
+
+        // starbucks
+        String earningsStarbucks = "0.3700 0.4500 0.2200 0.2700 0.6400 0.8300 0.9200 0.0100 1.3800 1.8400 1.9100 1.9900 3.2700 2.9500 3.04 3.42 3.82 4.16";
+        System.out.println(Stock.of("Starbucks", "NASDAQ:SBUX", earningsStarbucks, 2006).simulatePe(30));
+
+        // unilever
+        String earningsUnilever = "1.2900 1.6500 1.3500 1.7900 1.2100 1.5100 1.5100 1.5800 1.7100 1.8200 1.8200 1.7300 1.8300 2.1600 3.5000 3.5 2.72 2.90 3.21 3.58";
+        System.out.println(Stock.of("Unilever", "AMS:UNA", earningsUnilever, 2005).simulatePe(15));
+
+        // veeva
+        String earingsVeeva = "0.14 0.20 0.31 0.41 0.51 1.01 1.59 2.17 2.51 3.02";
+        System.out.println(Stock.of("Veeva", "NYSE:VEEV", earingsVeeva, 2014).simulatePe(70));
+
+        // google
+        String earningsGoogle = "2.6600 5.1100 6.7700 6.7300 10.3100 13.3500 15.0900 16.4100 19.4100 21.3700 24.6300 28.3200 18.2700 44.2200 46.48 54.53 62.62 72.69 82.44";
+        System.out.println(Stock.of("Google", "NASDAQ:GOOGL", earningsGoogle, 2005).simulatePe(25));
+
+        // apple
+        String earningsApple = "0.3400 0.5800 0.7800 0.9100 2.2000 4.0100 6.3800 5.7200 6.4900 9.2800 9.2800 8.3500 9.2700 12.0100 11.9700 14.89 15.91 13.98 14.87";
+        System.out.println(Stock.of("Apple", "NASDAQ:AAPL", earningsApple, 2005).simulatePe(18));
     }
 }
